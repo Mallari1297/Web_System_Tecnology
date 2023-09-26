@@ -1,0 +1,44 @@
+body{
+    margin: 0;
+}
+header{
+    border: 1px dotted rgb(32, 32, 216);
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-around;
+    background-color: rgb(231, 236, 238);
+    color: rgba(255, 0, 119, 0.956);
+    font-size: 25pt;
+    font-family: 'Courier New', Courier, monospace;
+    padding:1rem 0rem;
+}
+
+header div{
+    color: rgb(255, 98, 0);
+}
+header nav a{
+    color:blue;
+    text-decoration: none;
+}
+
+section .Title h1{
+    font-size: 12pt;
+}
+
+section .Title h2{
+    font-size: 14pt;
+    font-weight: normal /* or bold*/;
+}
+
+section .Title button{
+    background-color: blue;
+    color: whitesmoke;
+    padding: .8rem 1rem;
+    border: none;
+    border-radius: 5px;
+
+
+}
+section .Title image{
+    width: auto;
+}
