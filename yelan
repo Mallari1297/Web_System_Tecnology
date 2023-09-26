@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head> 
+<body>
+    <header>
+        <div>Logo</div>
+        <nav>
+        <a href="">Home</a>
+        <a href="">Profile</a>
+        <a href="">Contact Us</a>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <div class="Title"></div>
+            <h1>Yelans Detective Agency</h1>
+            <h2>Welcome to Yelans Detective Agency</h2>
+            <button>Read More</button>
+            <div class="poster-image">
+                <img src="assets/css/image/f120e977480400eedcd44e05def8383e_1330705997271155053.png" alt="Yelans Dice">
+            </div>
+        </section>
+    </main>
+
+
+</body>
+</html>
