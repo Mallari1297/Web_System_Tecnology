@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css">
+</head>
+<body>
+    <header class="bg-dark">
+        <div class="container">
+            <div class="row justify-content-between">
+                <div class="col-auto text-white">Logo</div>
+                <nav class="col-auto">
+                    <a href class="text-white">Link 1</a>
+                    <a href class="text-white">Link 2</a>
+                    <a href class="text-white">Link 3</a>      
+                </nav>
+            </div>
+        </div>
+        
+    </header>
+    
+    <main>
+        <div class="mt-4">
+            <div class="container">
+                <h1 class="text-dark">Heading</h1>
+                <p class="bg-warning text-dark">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, corrupti?</p>
+                <button class="btn btn-outline-dark">Read Me</button>
+            </div>
+            <section>
+                <section class="bg-warning mt-4">
+                    <div class="container">
+                        <h1 class="text-center pt-4 text-dark">About Us</h1>
+                        
+
+                         <div class="row">
+                            <div class="col-6">
+                                <img class="img-thumbnail" src="assets/css/image/Smile.jfif" alt="">
+                            </div>
+                            <div class="col-6 text-dark">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore aliquid officiis quae iusto provident assumenda!</p>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias necessitatibus, deserunt nulla illum et sit!</p>
+
+                            </div>
+                         </div>   
+                    </div>
+                </section>
+            </section>
+        </div>
+    </main>
+        <section class="pt-3 pb-4">
+            <div class="container">
+                <h1 class="text-center pt-3 text-dark">Products</h1>
+                <hr>
+                <div class="row">
+                    <div class="col-4">
+                        <div class="card">
+                            <img src="assets/css/image/Smile.jfif" alt="">
+                            <div class="card-body">
+                                <h3 class="card-title">Product 1</h3>
+                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae obcaecati quaerat reiciendis? Ducimus adipisci id, eos soluta eaque incidunt deserunt!</p>
+                                <button class="btn btn-outline-dark"> Read More</button>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="col-4">
+                        <div class="card">
+                            <img src="assets/css/image/Smile.jfif" alt="">
+                            <div class="card-body">
+                                <h3 class="card-title">Product 1</h3>
+                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae obcaecati quaerat reiciendis? Ducimus adipisci id, eos soluta eaque incidunt deserunt!</p>
+                                <button class="btn btn-outline-dark"> Read More</button>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="col-4">
+                        <div class="card">
+                            <img src="assets/css/image/Smile.jfif" alt="">
+                            <div class="card-body">
+                                <h3 class="card-title">Product 1</h3>
+                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae obcaecati quaerat reiciendis? Ducimus adipisci id, eos soluta eaque incidunt deserunt!</p>
+                                <button class="btn btn-outline-dark"> Read More</button>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </section class="bg-dark text-dark pt-3 pb-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-4">
+                        <h4 class="text-dark">About Us</h4>
+                        <hr>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim explicabo numquam, iste unde error dignissimos adipisci distinctio recusandae quas at?</p>
+                        <div class="col-4">
+                            <h4 class="text-dark">Quick Link</h4>
+                            <hr>
+                            <ul>
+                                <li></li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+</body>
+</html>
