@@ -1,0 +1,66 @@
+
+@keyframes flash {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+#div {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: hwb(27 22% 75% / 0.893);
+}
+
+#pokemonImageContainer {
+    text-align: center;
+    width: 200px;
+    height: 200px;
+    margin: 20px auto;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    animation: flash 20s infinite;
+}
+#pokemonImageContainer {
+    width: 200px;
+    height: 300px;
+    margin: 20px auto;
+    padding: 10px;
+    border: 10px solid #cccccc00;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#pokemonImageContainer img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+#pokemonImage {
+    max-width: 400px;
+    max-height: 400px;
+}
