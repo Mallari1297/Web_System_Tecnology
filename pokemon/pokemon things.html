@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="div">
+        <input type="text" id="pokemon">
+        <button id="search">Search</button>
+    </div>
+    <div id="pokemonImageContainer">
+        <img id="pokemonImage" src="" alt="Pokemon Image">
+    
+    </div>
+
+    <script>
+        document.getElementById('search').addEventListener('click', function(e){
+            searchPokemon(document.getElementById('pokemon').value);
+        })
+
+        function searchPokemon(pokemon){
+            fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon}`)
+                .then(res => res.json())
+                .then(function(data){
+                    document.getElementById('pokemonImage').src = data.sprites.front_default;
+                })
+                .catch((err) =>{
+                    alert('Pokémon not found!');
+                });
+        }
+    </script>
+</body>
+</html>
