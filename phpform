@@ -1,0 +1,101 @@
+<?php
+ 
+  ini_set('error_reporting', E_ALL);
+  ini_set('display_errors', true);
+  
+  $hostname = 'localhost';
+  $username = 'root';
+  $password = '';
+  $dbname = 'it2033';
+ 
+  $pleasewagkopyahin = mysqli_connect($hostname, $username, $password, $dbname);
+ 
+  $results = $pleasewagkopyahin->query("SELECT * FROM `users` WHERE 1")->fetch_all(MYSQLI_ASSOC);
+ 
+  // Normal Array
+  // $hello = [1,2,3,4];
+ 
+  // // Associate Array
+  // // key value pair
+  // $name = [
+  //   "key" => "value",
+  //   "key" => "value"
+  // ]
+  if(isset($_POST['register'])) {
+    $firstName = $_POST['first_name'];
+    $lastName = $_POST['last_name'];
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+ 
+    $pleasewagkopyahin->query("INSERT INTO `users`(`first_name`, `last_name`, `email`, `password`) VALUES ('$firstName','$lastName','$email','$password')");
+    header('location: /');
+  }
+ 
+  if(isset($_POST['update']) && isset($_GET['update'])) {
+    $id = $_GET['update'];
+    $firstName = $_POST['first_name'];
+    $lastName = $_POST['last_name'];
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+ 
+    $pleasewagkopyahin->query("UPDATE `users` SET `first_name`='$firstName',`last_name`='$lastName',`email`='$email',`password`='$password' WHERE id=" . $id);
+    header('location: /');
+  }
+ 
+ 
+  // Super globals
+  // $_POST
+  // $_GET
+  // $_SESSION
+ 
+  // [OK] C - REATE
+  // [OK] R - EAD 
+  // [OK] U - PDATE
+  // [OK] D - ELETE
+ 
+  if(isset($_GET['delete'])) {
+    $pleasewagkopyahin->query("DELETE FROM `users` WHERE id=" . $_GET['delete']);
+    header('location: /');
+  }
+?>
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <form method="POST">
+    <input type="text" name="first_name" />
+    <input type="text" name="last_name" />
+    <input type="email" name="email" />
+    <input type="password" name="password" />
+    <input type="submit" value="Register" name="register" />
+  </form>
+ 
+  <hr />
+ 
+  <h1>Update Form</h1>
+  <form method="POST">
+    <input type="text" name="first_name" />
+    <input type="text" name="last_name" />
+    <input type="email" name="email" />
+    <input type="password" name="password" />
+    <input type="submit" value="Update" name="update" />
+  </form>
+ 
+  <h1>List of Students</h1>
+  <div style="display: flex; flex-direction: column; gap: 4px;">
+  <?php foreach($results as $row): ?>
+    <div style="border: 1px solid black; border-radius: 4px;">
+      <p><?= $row['first_name'] ?> <?= $row['last_name'] ?></p>
+      <!-- QUERY PARAMETER -->
+      <a href="?delete=<?= $row['id'] ?>">Delete</a>
+      <a href="?update=<?= $row['id'] ?>">Update</a>
+    </div>
+  <?php endforeach; ?>
+  </div>
+</body>
+</html>
